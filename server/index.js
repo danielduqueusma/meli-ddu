@@ -4,11 +4,6 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const path = require('path');
 
-app.use(express.static(path.resolve(__dirname, '../client/build')));
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-});
-
 /**
  * @description Request to MELI api.
  * @returns {Object} Response formatted as JSON.
@@ -47,8 +42,6 @@ app.get('/api/items/:id', async (req, res) => {
     const categoryId = await axios.get(`http://api.mercadolibre.com/categories/${detail.data.category_id}`);
     const products = await axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${categoryId.data.name}`);
 
-    console.log(products)
-
     const formattedResponse = {
         "author": {
             "name": "Daniel",
@@ -80,4 +73,12 @@ app.get('/api/items/:id', async (req, res) => {
  */
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
+});
+
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
