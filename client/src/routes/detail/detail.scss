@@ -1,0 +1,71 @@
+@import './../../styles/_colors.scss';
+
+.containerDetail {
+  background: $gray-1;
+  .containerDetail__content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background: $white-1;
+    padding: 50px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 80%;
+    margin: 0 auto;
+    gap: 200px;
+
+    .containerDetail__content-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .sold {
+        font-size: 18px;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 800;
+      }
+      .price {
+        font-size: 32px;
+      }
+      .buy {
+        border: none;
+        background-color: #3483fa;
+        color: $white-1;
+        border-radius: 6px;
+        height: 48px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+
+    .containerDetail__content-description {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .title {
+        font-size: 32px;
+        margin-top: 50px;
+      }
+
+      .description {
+        font-size: 24px;
+        color: $gray-2;
+        text-align: justify;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 2fr 1fr;
+      gap: 100px;
+
+      .containerDetail__content-description {
+        grid-area: 2 / 1 / 3 / 3;
+        gap: 30px;
+        .title {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

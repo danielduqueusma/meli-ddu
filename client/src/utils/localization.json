@@ -1,0 +1,12 @@
+{
+  "search": {
+    "label": "Nunca dejes de buscar"
+  },
+  "detail": {
+    "nuevo": "Nuevo",
+    "vendidos": "vendidos",
+    "comprar": "Comprar",
+    "descripcion": "Descripción del producto"
+  },
+  "loading": "Cargando..."
+}
