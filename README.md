@@ -2,7 +2,7 @@ Challenge Mercado Libre Frontend.
 
 Host: https://meli-ddu.herokuapp.com/
 
-* Tecnologias para el desarrollo:
+* Tecnologías para el desarrollo:
 - El FrontEnd se realizó en React JS.
 - El Backend se realizó en Node JS.
 
@@ -27,4 +27,4 @@ CORRER LOCALMENTE LA APP:
 5. Correr el comando `npm start`.
 
 ARQUITECTURA A ALTO NIVEL:
-<img width="764" alt="image" src="https://user-images.githubusercontent.com/23347754/216803540-00b69aa9-394c-4598-a112-8054a108c00e.png">
+<img width="779" alt="image" src="https://user-images.githubusercontent.com/23347754/216836017-52bb2ad9-c3bf-4d57-8b43-ed9a8357cfc0.png">
