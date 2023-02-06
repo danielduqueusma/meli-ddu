@@ -12,6 +12,8 @@ Host: https://meli-ddu.herokuapp.com/
 
 * El código hecho en Node, actúa como una especie de MIDDLEWARE entre el Frontend y la api de MELI, ya que se encarga de recibir la petición y de
   esta manera enmascara la petición real a MELI; recibe la respuesta, la formatea y la devuelve al FrontEnd.
+  
+* Solo unos pocos unit testing sincronos ya que los asincronos se complican un poco mas por tener un middleware como punte.
 
 CORRER LOCALMENTE LA APP:
 
