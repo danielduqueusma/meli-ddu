@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-test('Renders App component', () => {
+test('Renders main component', () => {
   render(
     <Router>
       <App />
